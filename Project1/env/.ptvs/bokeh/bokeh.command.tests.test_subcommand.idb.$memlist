@@ -1,0 +1,11 @@
+test_missing_args
+test_one_arg
+test_no_args
+test_base_invoke
+test_is_abstract
+MagicMock
+_Good
+test_args
+pytest
+_Bad
+sc

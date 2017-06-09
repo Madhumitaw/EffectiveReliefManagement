@@ -1,0 +1,10 @@
+isfunction
+absolute_import
+partial
+ismethod
+getargspec
+FunctionType
+_callback_argspec
+CallbackManager
+formatargspec
+_check_callback

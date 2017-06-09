@@ -1,0 +1,17 @@
+LineCap
+Color
+check_line_properties
+LineJoin
+PROPS
+FILL
+ANGLE
+LINE
+check_properties_existence
+check_fill_properties
+TEXT
+GLYPH
+chain
+check_marker_properties
+MARKER
+check_text_properties
+prefix

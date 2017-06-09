@@ -1,0 +1,13 @@
+PROLOGUE_TEMPLATE
+basename
+unchanged
+absolute_import
+html_depart_collapsible_code_block
+nodes
+CodeBlock
+html_visit_collapsible_code_block
+jinja2
+EPILOGUE_TEMPLATE
+setup
+CollapsibleCodeBlock
+collapsible_code_block

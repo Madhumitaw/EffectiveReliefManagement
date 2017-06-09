@@ -1,0 +1,17 @@
+warnings
+PlotlyDict
+__all__
+GraphObjectFactory
+exceptions
+copy
+graph_objs_tools
+six
+PlotlyBase
+re
+OrderedDict
+_patch_data_class
+PlotlyList
+_patch_figure_class
+absolute_import
+graph_reference
+_add_classes_to_globals

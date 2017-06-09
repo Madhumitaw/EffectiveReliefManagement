@@ -1,0 +1,13 @@
+List
+Model
+Any
+figure
+test_Model_pretty
+Int
+_ModelInEmptyDocument
+Float
+curdoc
+test_model_in_empty_document_unsets_curdoc_on_model_references_and_then_restores
+Instance
+test_model_in_empty_document_sets_a_new_document_on_model_and_then_restores
+String

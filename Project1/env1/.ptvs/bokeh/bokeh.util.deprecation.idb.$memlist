@@ -1,0 +1,5 @@
+deprecated
+warnings
+BokehDeprecationWarning
+warn
+six

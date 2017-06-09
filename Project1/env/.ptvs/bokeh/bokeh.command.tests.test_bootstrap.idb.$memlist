@@ -1,0 +1,9 @@
+test_no_subcommand
+test_version
+test_version_short
+_assert_version_output
+is_python2
+pytest
+main
+sys
+__version__

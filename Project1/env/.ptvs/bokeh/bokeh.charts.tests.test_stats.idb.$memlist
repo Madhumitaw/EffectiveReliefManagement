@@ -1,0 +1,11 @@
+pd
+Bins
+test_histogram_ill_defined_data
+test_bin_labeling
+test_explicit_bin_count
+test_auto_bin_count
+Histogram
+ColumnDataSource
+test_histogram_wo_density
+pytest
+test_histogram_w_density

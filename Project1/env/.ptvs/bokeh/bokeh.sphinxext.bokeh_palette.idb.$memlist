@@ -1,0 +1,17 @@
+texinfo_visit_bokeh_palette
+JS
+_
+small_palettes
+html_visit_bokeh_palette
+nodes
+PALETTE_TEMPLATE
+jinja2
+absolute_import
+CSS
+man_visit_bokeh_palette
+bokeh_palette
+text_visit_bokeh_palette
+BokehPaletteDirective
+setup
+Directive
+latex_visit_bokeh_palette

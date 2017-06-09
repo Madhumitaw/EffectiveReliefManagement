@@ -1,0 +1,15 @@
+WMTSTileSource
+Model
+Any
+Dict
+absolute_import
+BBoxTileSource
+Int
+QUADKEYTileSource
+Float
+TileSource
+Override
+Bool
+TMSTileSource
+MercatorTileSource
+String

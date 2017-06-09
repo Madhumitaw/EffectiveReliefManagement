@@ -1,0 +1,4 @@
+test_command_package
+test_subcommand
+test_util
+test_bootstrap

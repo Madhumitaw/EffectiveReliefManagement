@@ -1,0 +1,16 @@
+test_client_server
+test_document
+test_colors
+test_main_module
+test_widgets
+test_io
+test_model
+test_palettes
+test_server
+test_bokeh_init
+test_transforms
+test_resources
+test_objects
+test_themes
+test_embed
+test_driving

@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Effective Disaster Relief</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+<div class="wrapper">
+	<div class="bar">
+		<div class="row">
+			<div class="columns small-12">
+				<p class="bar-phone">
+					<i class="fa fa-phone"></i> Call Us : <strong><a href="tel:+14089241000">+1 408 924 1000</a></strong>
+				</p><!-- /.bar-phone -->
+				
+				<div class="bar-socials">
+					<ul>
+						
+						<li>
+							<a href="http://www.facebook.com/">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://twitter.com/?lang=en">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+						
+						<li>
+							<a href="#">
+								<i class="fa fa-google-plus"></i>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://www.linkedin.com/">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</li>
+					</ul>
+				</div><!-- /.bar-socials -->
+			</div><!-- /.columns small-12 -->
+		</div><!-- /.row -->
+	</div><!-- /.bar -->
+
+	<header class="header">
+		<div class="row">
+			<div class="columns small-12"><a href="#" class="header-logo">
+					<img src="{{ url_for('static', filename = 'images/temp/logo.png') }}" alt="Charity | Foundation">
+					<span class="site-description">Foundation</span>
+				</a>
+				
+				<div class="header-inner">
+					<a href="#" class="button-burger">
+						<span></span>
+					</a>
+
+					<nav class="nav">
+						<ul>
+							<li>
+								<a href="/">Home</a>
+							</li>
+							<li>
+								<a href="/admin/">Admin login</a>
+							</li>
+
+							</!--li>
+
+							
+							<li>
+								<a href="/events/">Events</a>
+								
+							</li>
+							
+							<li>
+								<a href="/blog/">Blog</a>
+								
+							</li>
+							<li>
+								<a href="/statistics/">Statistics</a>
+							</li>
+
+							
+							<li>
+								<a href="/staff/">Staff</a>
+							</li>
+
+							
+
+							<li>
+								<a href="/contact/">Contact Us</a>
+							</li>
+						</ul>
+					</nav><!-- /.nav -->
+				
+					<div class="header-actions">
+						<a href="/" class="button">Donate</a>
+					</div><!-- /.header-actions -->
+				</div><!-- /.header-inner --></div><!-- /.columns small-12 -->
+		</div><!-- /.row -->
+	</header><!-- /.header -->
+
+	
+	<div class="main">
+		<div class="main-head">
+			<div class="main-head-image fullscreener">
+                
+				<img src="{{ url_for('static', filename = 'images/temp/main-image-1.jpg') }}" height="209" width="1800" alt="">
+			</div><!-- /.main-head-image fullscreener -->
+
+			<div class="main-head-content">
+				<div class="row">
+					<div class="columns small-12">
+						<h1 class="main-title">Make a donation</h1><!-- /.main-title -->
+						
+						<ul class="breadcrumbs">
+							<li>
+								<a href="#">Home</a>
+							</li>
+						
+							<li class="current">
+								<a href="#">Make a donation</a>
+							</li><!-- /.current -->
+						</ul><!-- /.breadcrumbs -->
+					</div><!-- /.columns small-12 -->
+				</div><!-- /.row -->
+			</div><!-- /.main-head-content -->
+		</div><!-- /.main-head -->
+
+		<div class="main-body">
+			<div class="row" data-equalizer data-equalizer-mq="large-up">
+				<div class="columns large-8" data-equalizer-watch>
+					<div class="content"><font color="red"><strong>{{errmsg}}</strong></font><br /><font color="red"><strong>{{loginmsg}}</strong></font>
+						<article class="post post-single format-gallery" itemscope itemtype="https://schema.org/BlogPosting">
+
+							<div class="post-body">
+								<div class="entry" itemprop="articleBody">
+									
+									<h2>Please Sign-up to make a Donation</h2>
+
+									<p></p>
+                                    {% from "_formhelpers.html" import render_field %}
+                                    <form method=post action="/pagedonate/">
+                                        {{ form.csrf_token }}
+                                        <div class="row">
+                                            <div class="large-5 columns">
+                                                <label>
+                                                  <strong> First Name {{render_field(form.firstname)}}
+                                                </label>
+                                            </div>
+
+                                            <div class="large-5 columns">
+                                                <label>
+                                                 <strong>Last Name</strong>   {{render_field(form.lastname)}}
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="large-5 columns">
+                                                <label>
+                                                  <strong>Username  {{render_field(form.email)}}
+
+                                                </label>
+                                            </div>
+
+                                            <div class="large-5 columns">
+                                                <label>
+                                              <strong>PhoneNo{{render_field(form.phoneno)}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-5 columns">
+                                                <label>
+                                                  <strong>Email Address</strong>  {{render_field(form.username)}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-5 columns">
+                                                <label>
+                                                  <strong>Password  {{render_field(form.password)}}
+                                                </label>
+                                            </div>
+                                            <div class="large-5 columns">
+                                                <label>
+                                                  <strong> Repeat Password  {{render_field(form.confirm)}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-5 columns">
+                                                <label>
+                                                <strong>Address    {{render_field(form.Address)}}
+                                                </label>
+                                            </div>
+                                            <div class="large-5 columns">
+                                                <label>
+                                                <strong>Country    {{render_field(form.Country)}}
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <br />
+                                        <input type="submit" value="Sign-Up" class="button" name="but">
+
+
+                                    </form>
+                                    
+                            
+
+								</div><!-- /.entry -->
+                            <!--strong>{{loginmsg}}<strong-->
+                                <div class="entry" itemprop="articleBody">
+
+                                    <div class="container" style="min-height:100% ;max-width :80% ">
+                                        {% with messages = get_flashed_messages() %}
+                                        {% if messages %}
+                                        {% for message in messages %}
+                                        <div class="alert alert-warning alert-dismissible" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            {{message}}
+                                        </div>
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endwith %}
+
+                                        {% block body %}{% endblock %}
+                                    </div>
+
+
+                                </div><!-- /.entry -->
+
+                                <div class="entry" itemprop="articleBody">
+
+                                    <h2>Already Registered : Login</h2>
+
+                                    <p></p>
+                               
+                                 {% from "_formhelpers.html" import render_field %}
+                                    <form method=post action="/pagedonate/">
+                                        {{ form1.csrf_token }}
+                                        <dl>
+                                            <div class="row">
+                                                <div class="large-5 columns">
+                                                    <label>
+                                                    <strong> Username   {{render_field(form1.username1)}}
+                                                    </label>
+                                                </div>
+                                                <div class="large-5 columns">
+                                                    <label>
+                                                    <strong>Password</strong>    {{render_field(form1.password1)}}
+                                                    </label>
+                                                </div>
+                                            </div>
+
+</dl>
+                                        <p><div><input type="submit" value="Login" name="but" class="button"></p><div>
+</form>
+
+</div><!-- /.entry -->
+							</div><!-- /.post-body -->
+
+
+						</article><!-- /.post post-single -->
+					</div><!-- /.content -->
+				</div><!-- /.columns large-8 -->
+				
+				<div class="columns large-3 push-large-1" data-equalizer-watch >
+					<div class="sidebar">
+						<aside class="widget widget_text">
+							<h3 class="widget-title">Get in touch!</h3><!-- /.widget-title -->
+
+							<div class="widget-body">
+								<p><b>Address:</b>  1 Washington Square,
+			`						 San Jose, CA-95192</p>
+								<p><b>Tel:</b> +1 408 924 1000<br />
+								<b>Fax:</b> +1 408 924 1000</p>
+							</div><!-- /.widget-body -->
+						</aside><!-- /.widget widget_text -->
+
+						<aside class="widget widget_upcoming_events">
+							<h2 class="widget-title"></h2>
+                            <img src="{{ url_for('static', filename = 'images/temp/thanks.jpg') }}" height="500" width="300" alt="">
+							<div class="slider-widget">
+								<div class="slider-clip">
+									<ul class="slides owl-carousel">
+										<li class="slide">
+											<div class="event-small">
+												<div class="event-image">
+													<a href="#">
+                                                      
+													</a>
+
+													<div class="event-date">
+														<small>Sept</small>
+
+														<span>18</span>
+													</div><!-- /.event-date -->
+												</div><!-- /.event-image -->
+
+												<div class="event-content">
+													<h4>
+														<a href="#">
+															 Organizing Collection Drives <br>
+															for Nepal Earthquake
+														</a>
+													</h4>
+
+													<p>You can donate clothes, blankets and packaged foods. Do not miss this opportunity to show your love and support.
+													</p>
+												</div><!-- /.event-content -->
+
+												<div class="event-actions">
+													<a href="#" class="button">More</a>
+
+													<a href="#" class="button button-facebook">
+														<i class="fa fa-facebook"></i>
+													</a>
+												</div><!-- /.event-actions -->
+											</div><!-- /.event-small -->
+										</li><!-- /.slide -->
+									
+										<li class="slide">
+											<div class="event-small">
+												<div class="event-image">
+													<a href="#">
+														<img src="static/images/temp/event-image.jpg" height="150" width="270" alt="">
+													</a>
+
+													<div class="event-date">
+														<small>Aug</small>
+
+														<span>17</span>
+													</div><!-- /.event-date -->
+												</div><!-- /.event-image -->
+
+												<div class="event-content">
+													<h4>
+														<a href="#">
+															Organizing Diesease Event <br>
+															To Get Good Donation
+														</a>
+													</h4>
+
+													<p>Donec varius ultrices purus. Nullam sit amet sapien tortorenean tincid.</p>
+												</div><!-- /.event-content -->
+
+												<div class="event-actions">
+													<a href="#" class="button">More</a>
+
+													<a href="#" class="button button-facebook">
+														<i class="fa fa-facebook"></i>
+													</a>
+												</div><!-- /.event-actions -->
+											</div><!-- /.event-small -->
+										</li><!-- /.slide -->
+									
+										<li class="slide">
+											<div class="event-small">
+												<div class="event-image">
+													<a href="#">
+														<img src="static/images/temp/event-image.jpg" height="150" width="270" alt="">
+													</a>
+
+													<div class="event-date">
+														<small>Aug</small>
+
+														<span>17</span>
+													</div><!-- /.event-date -->
+												</div><!-- /.event-image -->
+
+												<div class="event-content">
+													<h4>
+														<a href="#">
+															Organizing Diesease Event <br>
+															To Get Good Donation
+														</a>
+													</h4>
+
+													<p>Donec varius ultrices purus. Nullam sit amet sapien tortorenean tincid.</p>
+												</div><!-- /.event-content -->
+
+												<div class="event-actions">
+													<a href="#" class="button">More</a>
+
+													<a href="#" class="button button-facebook">
+														<i class="fa fa-facebook"></i>
+													</a>
+												</div><!-- /.event-actions -->
+											</div><!-- /.event-small -->
+										</li><!-- /.slide -->
+									</ul><!-- /.slides -->
+								</div><!-- /.slider-clip -->
+							</div><!-- /.slider-widget -->
+						</aside>
+
+					</!--div>
+
+				</div><!-- /.columns large-3 push-large-1 -->
+			</div><!-- /.row -->
+		</div><!-- /.main-body -->
+	</div><!-- /.main -->
+
+	<div class="callout">
+		<div class="row">
+			<div class="columns large-6">
+				<h2 class="callout-title">Change Their World. Change Yours. This changes everything.</h2><!-- /.callout-title -->
+			</div><!-- /.columns large-6 -->
+			
+			<div class="columns large-6">
+				<div class="callout-actions">
+					<!--<a href="#" class="button">Become Volunteer</a>
+
+					<span class="callout-separator">
+						<span>Or</span>
+					</span>-->
+
+					<a href="#" class="button">Donate For Cause</a>
+				</div><!-- /.callout-actions -->
+			</div><!-- /.columns large-6 -->
+		</div><!-- /.row -->
+	</div><!-- /.callout -->
+
+	<footer class="footer">
+		<div class="footer-body">
+			<div class="row">
+				<div class="columns large-3 medium-12">
+					<div class="footer-section">
+						<h4 class="footer-section-title">About EDRM</h4><!-- /.footer-section-title -->
+						
+						<div class="footer-section-body">
+							<p>Effective Disaster Relief Management is a project aimed at providing relief to disaster affected areas.</p>
+						</div><!-- /.footer-section-body -->
+					</div><!-- /.footer-section -->
+				</div><!-- /.columns large-3 medium-12 -->
+				
+				<div class="columns large-3 medium-12">
+					<div class="footer-section">
+						<h4 class="footer-section-title">Quick Links</h4><!-- /.footer-section-title -->
+						
+						<div class="footer-section-body">
+							<ul class="list-links">
+								<li>
+									<a href="#">Causes</a>
+								</li>
+								
+								<li>
+									<a href="#">Projects</a>
+								</li>
+								
+								<li>
+									<a href="#">Gallery</a>
+								</li>
+								
+							</ul><!-- /.list-links -->
+
+							<ul class="list-links">
+								<li>
+									<a href="#">Terms Of Use</a>
+								</li>
+								
+								<li>
+									<a href="#">Legal Desclaimer</a>
+								</li>
+								
+								<li>
+									<a href="#">Privacy Policy</a>
+								</li>
+							</ul><!-- /.list-links -->
+						</div><!-- /.footer-section-body -->
+					</div><!-- /.footer-section -->
+				</div><!-- /.columns large-3 medium-12 -->
+				
+				<div class="columns large-3 medium-12">
+					<div class="footer-section">
+						<h4 class="footer-section-title">Newsletter Signup</h4><!-- /.footer-section-title -->
+						
+						<div class="footer-section-body">
+							<p>Select your newsletters, enter your email address, and click "Subscribe"</p>
+
+							<div class="subscribe">
+								<form action="?" method="post">
+									<input type="submit" value="Go" class="subscribe-btn">
+									
+									<div class="subscribe-inner">
+										<input type="email" id="mail" name="mail" value="" placeholder="Email Address" class="subscribe-field">
+									</div><!-- /.subscribe-inner -->
+								</form>
+							</div><!-- /.subscribe -->
+						</div><!-- /.footer-section-body -->
+					</div><!-- /.footer-section -->
+				</div><!-- /.columns large-3 medium-12 -->
+				
+				<div class="columns large-3 medium-12">
+					<div class="footer-section">
+						<h4 class="footer-section-title">Contact Us</h4><!-- /.footer-section-title -->
+						
+						<div class="footer-section-body">
+							<p><b>Address:</b> 1 Washington Square,
+			`						 San Jose, CA-95192</p>
+
+							<div class="footer-contacts">
+								<p>
+									<span>
+										<i class="fa fa-phone"></i> Phone:
+									</span>
+
+									+1 408 924 1000
+								</p>
+								
+								<p>
+									<span>
+										<i class="fa fa-envelope-o"></i> Email:
+									</span>
+
+									<a href="#">info@EDRM.com</a>
+								</p>
+							</div><!-- /.footer-contacts -->
+						</div><!-- /.footer-section-body -->
+					</div><!-- /.footer-section -->
+				</div><!-- /.columns large-3 medium-12 -->
+			</div><!-- /.row -->
+		</div><!-- /.footer-body -->
+
+		<div class="footer-bar">
+			<div class="row">
+				<div class="columns small-12">
+					<div class="footer-credits">
+						<p>
+							Copyright 2016. All Rights Reserved by EDRM.</a>
+						</p>
+					</div><!-- /.footer-credits -->
+					
+					<div class="footer-socials">
+						<ul>					
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+						</ul>
+					</div><!-- /.footer-socials -->
+				</div><!-- /.columns small-12 -->
+			</div><!-- /.row -->
+		</div><!-- /.footer-bar -->
+	</footer><!-- /.footer -->
+</div><!-- /.wrapper -->
+<script src="static/javascripts/vendor.js"></script>
+<script src="static/javascripts/app.js"></script>
+<script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerwithlabel/src/markerwithlabel.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+die
+absolute_import
+argparse
+nice_join
+subcommands
+main
+__version__

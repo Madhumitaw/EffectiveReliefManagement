@@ -1,0 +1,7 @@
+WindowsTest
+os
+socket
+unittest
+skipIfNonWindows
+functools
+set_close_exec
