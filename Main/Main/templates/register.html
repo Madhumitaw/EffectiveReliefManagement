@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h4>Register</h4>
+        {{response}}
+        <br>
+        {% from "_formhelpers.html" import render_field %}
+        <form method=post action="/register/">
+     
+            <dl>
+                {{render_field(form.username)}}
+             
+                {{render_field(form.password)}}
+                {{render_field(form.confirm)}}
+                {{render_field(form.Gender)}}
+                {{render_field(form.accept_tos)}}
+            </dl>
+            <p><input type="submit" value="Register" name="but"></p>
+        </form>
+
+        <form method=post action="/register/">
+            {{ form1.csrf_token }}
+            <dl>
+                {{render_field(form1.username1)}}
+
+                {{render_field(form1.password1)}}
+               
+            </dl>
+            <p><input type="submit" value="Login" name="but"></p>
+        </form>
+        {% if error %}
+        <p class="error"><strong>Error:</strong>{{error}}</p>
+        {% endif %}
+
+    </div>
+</body>
+</html>
