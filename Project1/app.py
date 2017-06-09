@@ -47,8 +47,8 @@ wsgi_app = app.wsgi_app
 ##Azure connection
 connection = pypyodbc.connect('Driver={SQL Server};' 'Server=tcp:madhuw.database.windows.net,1433;'
 'Database=dbtest;'
-'Uid=madhu123@madhuw;'
-'Pwd=Madhu@123;')
+'Uid=***;'
+'Pwd=***;')
 
 cursor = connection.cursor()
 
